@@ -45,7 +45,7 @@ def create_mask_det(a,a2_span,a4_span):
     return np.where(abs(det)<1,1,0)
 
 #%%
-## FIG 2
+## FIG 1
 ## WEIGHTS IN THE (beta1,beta2) PARAMETER SPACE
 ## A: chosen affine transformation
 ## b1_range: minimum and maximum value for the beta1 span [b1_min,b1_max]
@@ -141,7 +141,7 @@ def balance_a2a4(beta1,beta2,A,a2_range,a4_range,span,savedir):
     return
 
 ## PHASE SHIFT
-def phase_a2a4(beta1,beta2,A,a2_range,a4_range,span,savedir):
+def phase_a2a4(beta1,beta2,A,a2_range,a4_range,span,savedir,phase_shift = []):
     
     ## define span of parameter spac
     a2_span = np.tile(np.linspace(a2_range[0],a2_range[1],span),(span,1))
@@ -159,13 +159,14 @@ def phase_a2a4(beta1,beta2,A,a2_range,a4_range,span,savedir):
     ## compute the mean angle between I and the AR(2) model, the mean angle
     ## between E and the AR(2) model and then compute the difference between
     ## the two estimated angles (default time = 1000)
-    phase_shift = np.zeros_like(weights[0])
-    for idx in np.ndenumerate(a2_span):
-        A[1],A[3] = a2_span[idx[0]],a4_span[idx[0]]
-        ar,E,I,_ = dyn.num_solution(1000,A,beta1,beta2)
-        phase_shift[idx[0]] = np.mean(np.arctan2(I[5:],ar[5:-1])) - np.mean(np.arctan2(E[5:],ar[5:-1]))
-    ## save phase shift data
-    np.save(savedir+'/phase_shift',phase_shift)
+    if phase_shift == []:
+        phase_shift = np.zeros_like(weights[0])
+        for idx in np.ndenumerate(a2_span):
+            A[1],A[3] = a2_span[idx[0]],a4_span[idx[0]]
+            ar,E,I,_ = dyn.num_solution(1000,A,beta1,beta2)
+            phase_shift[idx[0]] = np.mean(np.arctan2(I[5:],ar[5:-1])) - np.mean(np.arctan2(E[5:],ar[5:-1]))
+        ## save phase shift data
+        np.save(savedir+'/phase_shift',phase_shift)
     
     ## PLOT
     fig = plt.figure(figsize=(6,6), dpi=300)
@@ -174,8 +175,8 @@ def phase_a2a4(beta1,beta2,A,a2_range,a4_range,span,savedir):
     plt.xticks(np.linspace(0,span,6),np.round(np.linspace(a2_range[0],a2_range[1],6),2).tolist())
     plt.yticks(np.linspace(0,span,6),np.round(np.linspace(a4_range[1],a4_range[0],6),2).tolist())
     
-    plt.axhline(y=span/2-(np.abs(a4_span[:,0])).argmin(),linewidth=.5, linestyle='dashed',color='xkcd:light grey')
-    plt.axvline(x=(np.abs(a2_span[0,:])).argmin(),linewidth=.5, linestyle='dashed',color='xkcd:light grey')
+    plt.axhline(y=(np.abs(a4_span[:,0])).argmin(),linewidth=.5, linestyle='dashed',color='k')
+    plt.axvline(x=(np.abs(a2_span[0,:])).argmin(),linewidth=.5, linestyle='dashed',color='k')
     plt.xlim(0,span)
     plt.ylim(span,0)
     ## show masks for region of the parameter space
@@ -191,7 +192,7 @@ def phase_a2a4(beta1,beta2,A,a2_range,a4_range,span,savedir):
     fig.tight_layout(rect=[0, 0.01, 1, 0.98]) 
     plt.savefig(savedir+'/phase_shift_b1_{}_b2_{}_A_{}.png'.format(beta1,beta2,A), format='png', dpi=300)
     plt.close()
-    return
+    return phase_shift
 
 ## WEIGHTS
 def weights_a2a4(beta1,beta2,A,a2_range,a4_range,span,savedir):
