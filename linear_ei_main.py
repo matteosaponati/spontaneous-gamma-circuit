@@ -56,8 +56,20 @@ def compute_weights(A,beta1,beta2):
 time = 1000
 ar,E,I,eps = num_solution(time,A,beta1,beta2)
 
-#%% 
+#%%
 ## FIG 1
+## WEIGHTS IN THE (beta1,beta2) PARAMETER SPACE
+## A: chosen affine transformation
+## b1_range: minimum and maximum value for the beta1 span [b1_min,b1_max]
+## b2_range: minimum and maximum value for the beta2 span [b2_min,b2_max]
+## savedir: directory for saving
+b1_range, b2_range = [-2,2], [-1,1]
+span = 800
+
+plt_parspace.weights_b1b2(A,b1_range,b2_range,span,main_dir)
+
+#%% 
+## FIG 2
 ## PLOT NUMERICAL SOLUTIONS and PHASE SPACE TRANSFORMATION
 ## A: chosen affine transformation
 ## beta1, beta2: chosen AR(2) parameters
@@ -69,19 +81,6 @@ time = 400
 N = 10000
 plt_dyn.plot_dynamics(A,beta1,beta2,time,N,main_dir)
 
-#%%
-## FIG 2
-## WEIGHTS IN THE (beta1,beta2) PARAMETER SPACE
-## A: chosen affine transformation
-## b1_range: minimum and maximum value for the beta1 span [b1_min,b1_max]
-## b2_range: minimum and maximum value for the beta2 span [b2_min,b2_max]
-## savedir: directory for saving
-b1_range, b2_range = [-2,2], [-1,1]
-span = 800
-
-plt_parspace.weights_b1b2(A,b1_range,b2_range,span,main_dir)
-#plt_parspace.weights_b1b2_proxy(A,main_dir)
-
  #%%
 ## FIG 3
 ## PHASE SHIFT AND E-I BALANCE IN THE (a2,a4) SPACE
@@ -92,7 +91,9 @@ plt_parspace.weights_b1b2(A,b1_range,b2_range,span,main_dir)
 ## savedir: directory for saving
 a2_range, a4_range = [-4,4], [-4,4]
 span = 800
+phase_shift = []
+
 
 plt_parspace.balance_a2a4(beta1,beta2,A,a2_range,a4_range,span,main_dir)
 plt_parspace.weights_a2a4(beta1,beta2,A,a2_range,a4_range,span,main_dir)
-plt_parspace.phase_a2a4(beta1,beta2,A,a2_range,a4_range,span,main_dir)
+phase_shift = plt_parspace.phase_a2a4(beta1,beta2,A,a2_range,a4_range,span,main_dir,phase_shift)
