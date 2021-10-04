@@ -1,7 +1,6 @@
 "LINEAR E-I SYSTEM"
 import sys
 main_dir = ''
-main_dir = '/mnt/gs/home/saponatim/linear_EI_circuit/'
 sys.path.append(main_dir)
 
 import linear_ei_parspace as parspace
