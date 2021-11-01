@@ -25,15 +25,16 @@ scripts to replicate the results shown in the related figure
 * `supp3_main`
 
 ## citation and credits
-Matteo Saponati, Martin Vinck (2021). **Anticipation of spike patterns at the single neuron level and emergence of spike-timing-dependent plasticity** <br/>
-doi: link
+Spyropoulos, G., Saponati, M., Dowdall, J. R., Schölvinck, M. L., Bosman, C. A., Lima, B., ... & Fries, P. (2020). **Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise**. bioRxiv, 793729. <br/>
 
 ```
-@article{saponati2021anticipation,
-  title={Anticipation of spike patterns at the single neuron level and emergence of spike-timing-dependent plasticity},
-  author={Saponati, Matteo and Vinck, Martin},
-  journal={arXiv preprint arXiv:lalala},
-  year={2021}
+@article{spyropoulos2020spontaneous,
+  title={Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise},
+  author={Spyropoulos, Georgios and Dowdall, Jarrod Robert and Sch{\"o}lvinck, Marieke Louise and Bosman, Conrado Arturo and Lima, Bruss and Peter, Alina and Onorato, Irene and Klon-Lipok, Johanna and Roese, Rasmus and Neuenschwander, Sergio and others},
+  journal={bioRxiv},
+  pages={793729},
+  year={2020},
+  publisher={Cold Spring Harbor Laboratory}
 }
 ```
 
