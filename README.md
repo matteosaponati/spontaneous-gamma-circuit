@@ -17,10 +17,10 @@ the code is written in [Python 3.x]
 ## structure  
 
 * `linear_ei_main` <br/>
-run with 4 optional args: beta1, beta2, the affine transformation matrix A (list of 4 elements `[a1,a2,a3,a4]`), total number of timesteps 
+run with 4 optional args: beta1, beta2, the affine transformation matrix A (list of 4 elements `[a1,a2,a3,a4]`), total number of timesteps T
 (default args as in the paper)<br/>
 `python linear_ei_main {} {} {} {}` <br/>
-output: the numerical solution of the AR(2) and of the <br/>
+outputs: <br/>
 `num_solution_ar.npy`: numerical solution of AR(2) model <br/>
 `num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation (list [E,I]) 
 
