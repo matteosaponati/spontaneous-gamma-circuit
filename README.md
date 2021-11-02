@@ -1,4 +1,4 @@
-# Linear E-I circuit
+# LINEAR E-I CIRCUIT
 
 this is a repository for this paper:
 <br/> "*Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise*"<br/>
