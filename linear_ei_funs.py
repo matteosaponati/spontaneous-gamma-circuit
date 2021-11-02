@@ -14,7 +14,7 @@ time: lenght of the simulation
 A: transformation matrix
 beta1, beta2: parameter of the AR(2) model
 """
-def num_solution(time,A,beta1,beta2):
+def num_solution(beta1,beta2,A,time):
     ar = np.zeros(time)
     eps = np.random.randn(time)
     "numerical solution"
