@@ -22,7 +22,7 @@ run with 4 optional args: beta1, beta2, the affine transformation matrix A (list
 `python linear_ei_main {} {} {} {}` <br/>
 outputs: <br/>
 `num_solution_ar.npy`: numerical solution of AR(2) model <br/>
-`num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation (list [E,I]) 
+`num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation
 
 * scripts to replicate the results shown in the related figure<br/>
 `supp1_main` <br/>
