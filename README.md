@@ -15,14 +15,19 @@ the code is written in [Python 3.x]
 `git clone` the repository to your home computer.
 
 ## structure  
-`python linear_ei_main {} {} {}` - insert the values of beta1 and beta2 and the affine transformation matrix A (as a list of 4 elements `[a1,a2,a3,a4]`)
 
-output: the numerical solution of the AR(2) and of the (E,I) system obtained with the affine transformation 
+* `linear_ei_main` 
+run with 4 optional args: beta1, beta2, the affine transformation matrix A (as a list of 4 elements `[a1,a2,a3,a4]`), total number of timesteps T
+(default args as in the paper)
+`python linear_ei_main {} {} {} {}` 
+output: the numerical solution of the AR(2) and of the 
+`num_solution_ar.npy`: numerical solution of AR(2) model 
+`num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation (list [E,I]) 
 
-scripts to replicate the results shown in the related figure
-* `supp1_main` 
-* `supp2_main`  
-* `supp3_main`
+* scripts to replicate the results shown in the related figure
+** `supp1_main` 
+** `supp2_main`  
+** `supp3_main`
 
 ## citation and credits
 Spyropoulos, G., Saponati, M., Dowdall, J. R., Schölvinck, M. L., Bosman, C. A., Lima, B., ... & Fries, P. (2020). **Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise**. bioRxiv, 793729. <br/>
