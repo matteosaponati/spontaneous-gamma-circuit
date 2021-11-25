@@ -5,10 +5,7 @@ import linear_ei_funs as funs
 
 """
 PARAMETERS
-beta1
-beta2
-A
-time (total number of timestep for num simulation)
+beta1, beta2, A, time (total number of timestep for num simulation)
 """
 beta1 = float(sys.argv[1]) if len(sys.argv) > 1 else 1.9449
 beta2 = float(sys.argv[2]) if len(sys.argv) > 2 else -.9801
