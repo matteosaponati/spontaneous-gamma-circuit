@@ -39,8 +39,7 @@ def compute_weights(A,beta1,beta2):
     return weights, [r'$v_{ee}$',r'$v_{ei}$',r'$v_{ie}$',r'$v_{ii}$']
 
 """
-averaging over many time series
-to compute distribution in the phase space
+compute average: distribution in the phase space
 """
 def phase_space_average(A,beta1,beta2,time,N):
     ar_m = np.zeros(time)
