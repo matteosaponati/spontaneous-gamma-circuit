@@ -3,7 +3,7 @@
 this is a repository for this paper:
 <br/> "*Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise*"<br/>
 G Spyropoulos, M Saponati, et al <br/>
-(under review, Nature Communications)
+(accpeted, Nature Communications)
 [[BiorXiv]](https://www.biorxiv.org/content/10.1101/793729v2.abstract)
 
 ## dependencies
