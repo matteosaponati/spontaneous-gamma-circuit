@@ -1,7 +1,7 @@
-# LINEAR E-I CIRCUIT
+# Spontaneous gamma dynamics implemented in a noisy damped harmonic oscillator
 
 this is a repository for this paper:
-<br/> "*Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise*"<br/>
+<br/> "*Spontaneous variability in gamma dynamics described by a damped harmonic oscillator driven by noise*"<br/>
 G Spyropoulos, M Saponati, et al <br/>
 (accpeted, Nature Communications)
 [[BiorXiv]](https://www.biorxiv.org/content/10.1101/793729v2.abstract)
