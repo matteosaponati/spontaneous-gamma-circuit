@@ -29,8 +29,8 @@ outputs: <br/>
 `supp2_main`  <br/>
  `supp3_main`
 
-## citation and credits
-Spyropoulos, G., Saponati, M., Dowdall, J. R., Schölvinck, M. L., Bosman, C. A., Lima, B., ... & Fries, P. (2020). **Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise**. bioRxiv, 793729. <br/>
+ <!--- ## citation and credits
+Spyropoulos, G., Saponati, M., Dowdall, J. R., Schölvinck, M. L., Bosman, C. A., Lima, B., ... & Fries, P. (2020). **Spontaneous variability in gamma dynamics described by a damped harmonic oscillator driven by noise**. bioRxiv, 793729. <br/>
 
 ```
 @article{spyropoulos2020spontaneous,
@@ -40,7 +40,7 @@ Spyropoulos, G., Saponati, M., Dowdall, J. R., Schölvinck, M. L., Bosman, C. A.
   pages={793729},
   year={2020},
   publisher={Cold Spring Harbor Laboratory}
-}
+} -->
 ```
 
 
