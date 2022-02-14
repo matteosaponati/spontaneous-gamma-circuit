@@ -1,6 +1,6 @@
 # spontaneous gamma dynamics implemented in a noisy damped harmonic oscillator
 
-this is a repository for this paper:
+this is a repository for the paper:
 <br/> "*Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise*"<br/>
 G Spyropoulos, M Saponati, JR Dowdall, ML Schölvinck, CA Bosman, B Lima, A Peter, I Onorato, J Klon-Lipok, R Roese, S Neuenschwander, W Singer, P Fries, M Vinck <br/>
 (2022, Nature Communications)
