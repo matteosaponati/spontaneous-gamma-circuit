@@ -1,9 +1,9 @@
 # Spontaneous gamma dynamics implemented in a noisy damped harmonic oscillator
 
 this is a repository for this paper:
-<br/> "*Spontaneous variability in gamma dynamics described by a damped harmonic oscillator driven by noise*"<br/>
-G Spyropoulos, M Saponati, et al <br/>
-(accpeted, Nature Communications)
+<br/> "*Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise*"<br/>
+G Spyropoulos, M Saponati, JR Dowdall, ML Schölvinck, CA Bosman, B Lima, A Peter, I Onorato, J Klon-Lipok, R Roese, S Neuenschwander, W Singer, P Fries, M Vinck <br/>
+(2022, Nature Communications)
 [[BiorXiv]](https://www.biorxiv.org/content/10.1101/793729v2.abstract)
 
 ## dependencies
@@ -16,10 +16,10 @@ the code is written in [Python 3.x]
 
 ## structure  
 
-* `linear_ei_main` <br/>
+* `main` <br/>
 (default args as in the paper)<br/>
 run with 4 optional args: beta1, beta2, the affine transformation matrix A (list of 4 elements `[a1,a2,a3,a4]`), total number of timesteps T
-`python linear_ei_main {} {} {} {}` <br/>
+`python main {} {} {} {}` <br/>
 outputs: <br/>
 `num_solution_ar.npy`: numerical solution of AR(2) model <br/>
 `num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation
