@@ -23,7 +23,7 @@ outputs: <br/>
 `num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation
 
 * scripts to replicate the results shown in the related figure<br/>
-`python supp_figures/supp1_main` (optional args: beta1, beta2, affine matrix A, number of timesteps T) <br/>
+`python supp1_main` (optional args: beta1, beta2, affine matrix A, number of timesteps T) <br/>
 `python supp2_main` (optional arg: affine matrix A) <br/>
 `python supp3_main` (optional args: (optional args: beta1, beta2, affine matrix A) 
 
