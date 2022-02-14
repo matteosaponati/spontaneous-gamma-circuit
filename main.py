@@ -1,7 +1,7 @@
 import numpy as np
 import sys
 import ast
-import linear_ei_funs as funs
+import funs as funs
 
 """
 PARAMETERS

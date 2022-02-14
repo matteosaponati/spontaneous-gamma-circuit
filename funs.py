@@ -46,8 +46,8 @@ def phase_space_average(A,beta1,beta2,time,N):
     E_m,I_m = np.zeros(time-1), np.zeros(time-1)
     
     for k in range(N):
-        ar,E,I,_ = num_solution(time,A,beta1,beta2)
-        ar_m += ar 
+        ar,E,I,_ = num_solution(beta1,beta2,A,time)
+        ar_m += ar
         E_m += E
         I_m += I
     
@@ -65,7 +65,7 @@ def plot_dynamics(A,beta1,beta2,time,N):
     
     fig = plt.figure(figsize=(12,14), dpi=300)
     "damped oscillations dynamics in time"
-    ar,E,I,_ = num_solution(time,A,beta1,beta2)
+    ar,E,I,_ = num_solution(beta1,beta2,A,time)
     plt.subplot(4,2,1)
     plt.xlabel('timesteps')
     plt.ylabel(r'$x_t$')
@@ -87,7 +87,7 @@ def plot_dynamics(A,beta1,beta2,time,N):
     plt.ylabel(r'$I_t$')
     plt.hist2d(E,I,bins=100,cmap='Purples')
     "critical oscillations dynamics in time"
-    ar,E,I,_ = num_solution(time,A,beta1,-1.)
+    ar,E,I,_ = num_solution(beta1,-1.,A,time)
     plt.subplot(4,2,3)
     plt.xlabel('timesteps')
     plt.ylabel(r'$x_t$')
@@ -110,7 +110,7 @@ def plot_dynamics(A,beta1,beta2,time,N):
     plt.hist2d(E,I,bins=100,cmap='Purples')
     
     fig.tight_layout(rect=[0, 0., 1, 0.98]) 
-    plt.savefig('dynamics_A_{}.png'.format(A), format='png', dpi=300)
+    plt.savefig('plots/supp1_dynamics_A_{}.png'.format(A), format='png', dpi=300)
     plt.close()
     del ar,E,I
     return
@@ -167,7 +167,7 @@ def weights_b1b2(A,b1_range,b2_range,span):
         plt.plot(np.arange(0,span,1),span/2+(1/(span/2))*((np.arange(0,span,1)-span/2)**2),linewidth=.5,color='k')
               
     fig.tight_layout(rect=[0, 0.01, 1, 0.98]) 
-    plt.savefig('weights_A_{}.png'.format(A), format='png', dpi=300)
+    plt.savefig('plots/supp_2_weights_A_{}.png'.format(A), format='png', dpi=300)
     plt.close()
     return
 
@@ -211,7 +211,7 @@ def balance_a2a4(beta1,beta2,A,a2_range,a4_range,span):
     plt.colorbar()
     
     fig.tight_layout(rect=[0, 0.01, 1, 0.98]) 
-    plt.savefig('EI_balance_b1_{}_b2_{}_A_{}.png'.format(beta1,beta2,A), format='png', dpi=300)
+    plt.savefig('plots/supp_3_EI_balance_b1_{}_b2_{}_A_{}.png'.format(beta1,beta2,A), format='png', dpi=300)
     plt.close()
     return
 
@@ -235,7 +235,7 @@ def phase_a2a4(beta1,beta2,A,a2_range,a4_range,span):
     phase_shift = np.zeros_like(weights[0])
     for idx in np.ndenumerate(a2_span):
         A[1],A[3] = a2_span[idx[0]],a4_span[idx[0]]
-        ar,E,I,_ = num_solution(1000,A,beta1,beta2)
+        ar,E,I,_ = num_solution(beta1,beta2,A,1000)
         phase_shift[idx[0]] = np.mean(np.arctan2(I[5:],ar[5:-1])) - np.mean(np.arctan2(E[5:],ar[5:-1]))
     np.save('phase_shift',phase_shift)
     
@@ -255,7 +255,7 @@ def phase_a2a4(beta1,beta2,A,a2_range,a4_range,span):
     plt.colorbar()
     
     fig.tight_layout(rect=[0, 0.01, 1, 0.98]) 
-    plt.savefig('phase_shift_b1_{}_b2_{}_A_{}.png'.format(beta1,beta2,A), format='png', dpi=300)
+    plt.savefig('plots/supp_3_phase_shift_b1_{}_b2_{}_A_{}.png'.format(beta1,beta2,A), format='png', dpi=300)
     plt.close()
     return
 
@@ -289,7 +289,7 @@ def weights_a2a4(beta1,beta2,A,a2_range,a4_range,span):
         plt.imshow(weights[k],aspect='auto',cmap='PRGn',norm=MidpointNormalize(midpoint=0), vmin=-20, vmax=20,alpha=.9)
         plt.colorbar()
     fig.tight_layout(rect=[0, 0.01, 1, 0.96]) 
-    plt.savefig('weights_b1_{}_b2_{}_A_{}.png'.format(beta1,beta2,A), format='png', dpi=300)
+    plt.savefig('plots/supp_3_weights_b1_{}_b2_{}_A_{}.png'.format(beta1,beta2,A), format='png', dpi=300)
     plt.close()
     return
 
