@@ -7,12 +7,10 @@ G Spyropoulos, M Saponati, JR Dowdall, ML Schölvinck, CA Bosman, B Lima, A Pete
 [[BiorXiv]](https://www.biorxiv.org/content/10.1101/793729v2.abstract)
 
 ## dependencies
-the code is written in [Python 3.x]
-1. [numpy]
-2. [matplotlib]
+the code is written in [Python 3.x], requires [numpy] and [matplotlib]
 
 ## usage
-`git clone` the repository to your home computer.
+just `git clone` the repository to your computer.
 
 ## structure  
 
@@ -25,9 +23,9 @@ outputs: <br/>
 `num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation
 
 * scripts to replicate the results shown in the related figure<br/>
-`supp1_main` <br/>
-`supp2_main`  <br/>
- `supp3_main`
+`python supp_figures/supp1_main` (optional args: beta1, beta2, affine matrix A, number of timesteps T) <br/>
+`python supp2_main` (optional arg: affine matrix A) <br/>
+`python supp3_main` (optional args: (optional args: beta1, beta2, affine matrix A) 
 
  <!--- ## citation and credits
 Spyropoulos, G., Saponati, M., Dowdall, J. R., Schölvinck, M. L., Bosman, C. A., Lima, B., ... & Fries, P. (2020). **Spontaneous variability in gamma dynamics described by a damped harmonic oscillator driven by noise**. bioRxiv, 793729. <br/>
