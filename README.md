@@ -21,7 +21,7 @@ the modules of the package are in `utils/`.
 
 * `main` <br/>
 (default args as in the paper, optional args: `beta1`, `beta2`, total number of timesteps `time`, the four elements of the affine transformation matrix A listed as `a1,a2,a3,a4`)<br/>
-`python main {} {} {} {} {} {} {}` <br/>
+`python main {} {} {} {} {} {} {}` <br/><br/>
 outputs: <br/>
 `results/num_solution_ar.npy`: numerical solution of AR(2) model <br/>
 `results/num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation
