@@ -20,7 +20,7 @@ the project has a pip-installable package. How to set it up:
 the modules of the package are in `utils/`.
 
 * `main` <br/>
-(default args as in the paper, optional args: beta1, beta2, total number of timesteps `time`, the four elements of the affine transformation matrix A listed as `[[a1,a2],[a3,a4]]`)<br/>
+(default args as in the paper, optional args: `beta1`, `beta2`, total number of timesteps `time`, the four elements of the affine transformation matrix A listed as `[[a1,a2],[a3,a4]]`)<br/>
 `python main {} {} {} {} {} {} {}` <br/>
 outputs: <br/>
 `results/num_solution_ar.npy`: numerical solution of AR(2) model <br/>
@@ -28,7 +28,7 @@ outputs: <br/>
 
 * scripts to replicate the results shown in the related figure<br/>
 `python suppfig_1` (optional arg: affine matrix `A`) <br/>
-`python suppfig_2` (optional args: `beta1`, `beta2``, number of timesteps `time`, affine matrix `A) <br/>
+`python suppfig_2` (optional args: `beta1`, `beta2`, number of timesteps `time`, affine matrix `A`) <br/>
 `python suppfig_3` (optional args: (optional args: `beta1`, `beta2`, number of timesteps `time`, affine matrix `A`) <br/><br/>
 The plots are located in `/plots`
 
