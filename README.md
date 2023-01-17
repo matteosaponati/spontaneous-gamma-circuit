@@ -34,9 +34,8 @@ outputs: <br/>
 The plots are located in `/plots`
 
 
- <!--- ## citation and credits
+ ## citation and credits
 Spyropoulos, G., Saponati, M., Dowdall, J. R., Schölvinck, M. L., Bosman, C. A., Lima, B., ... & Fries, P. (2020). **Spontaneous variability in gamma dynamics described by a damped harmonic oscillator driven by noise**. bioRxiv, 793729. <br/>
-
 ```
 @article{spyropoulos2020spontaneous,
   title={Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise},
