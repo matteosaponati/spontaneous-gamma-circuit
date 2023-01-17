@@ -7,7 +7,7 @@ G Spyropoulos, M Saponati, JR Dowdall, ML Schölvinck, CA Bosman, B Lima, A Pete
 https://www.nature.com/articles/s41467-022-29674-x
 
 ## dependencies
-the code is written in [Python 3.x], requires [numpy] and [matplotlib]
+all the simulations use [Python 3.8]. The scripts require [numpy] and [matplotlib].
 
 ## usage
 just `git clone` the repository to your computer.
@@ -16,8 +16,8 @@ just `git clone` the repository to your computer.
 
 * `main` <br/>
 (default args as in the paper)<br/>
-run with 4 optional args: beta1, beta2, the affine transformation matrix A (list of 4 elements `[a1,a2,a3,a4]`), total number of timesteps T
-`python main {} {} {} {}` <br/>
+run with 4 optional args: beta1, beta2, total number of timesteps `time`, the four elements of the affine transformation matrix A (listed as `[[a1,a2],[a3,a4]]`)
+`python main {} {} {} {} {} {} {}` <br/>
 outputs: <br/>
 `num_solution_ar.npy`: numerical solution of AR(2) model <br/>
 `num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation
