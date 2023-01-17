@@ -10,14 +10,14 @@ https://www.nature.com/articles/s41467-022-29674-x
 all the simulations use [Python 3.8]. The scripts require [numpy] and [matplotlib].
 
 ## usage
-The project has a pip-installable package. How to set it up:
+the project has a pip-installable package. How to set it up:
 
 - `git clone` the repository 
 - `pip install -e . `
 
 ## structure  
 
-The modules of the package are in `utils/`.
+the modules of the package are in `utils/`.
 
 * `main` <br/>
 (default args as in the paper)<br/>
