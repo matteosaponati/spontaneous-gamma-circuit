@@ -1,4 +1,4 @@
-# spontaneous gamma dynamics with a noisy, damped harmonic oscillator
+# spontaneous gamma dynamics with a damped harmonic oscillator driven by noise
 
 this is a repository for the paper:
 <br/> "*Spontaneous variability in gamma dynamics described by a damped harmonic oscillator driven by noise*"<br/>
