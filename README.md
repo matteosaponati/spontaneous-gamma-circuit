@@ -38,13 +38,15 @@ The plots are located in `/plots`
 Spyropoulos, G., Saponati, M., Dowdall, J. R., Schölvinck, M. L., Bosman, C. A., Lima, B., ... & Vinck, M. (2022). 
 **Spontaneous variability in gamma dynamics described by a damped harmonic oscillator driven by noise**. Nature communications, 13(1), 1-18.<br/>
 ```
-@article{spyropoulos2020spontaneous,
-  title={Spontaneous variability in gamma dynamics described by a linear harmonic oscillator driven by noise},
-  author={Spyropoulos, Georgios and Dowdall, Jarrod Robert and Sch{\"o}lvinck, Marieke Louise and Bosman, Conrado Arturo and Lima, Bruss and Peter, Alina and Onorato, Irene and Klon-Lipok, Johanna and Roese, Rasmus and Neuenschwander, Sergio and others},
-  journal={bioRxiv},
-  pages={793729},
-  year={2020},
-  publisher={Cold Spring Harbor Laboratory}
+@article{spyropoulos2022spontaneous,
+  title={Spontaneous variability in gamma dynamics described by a damped harmonic oscillator driven by noise},
+  author={Spyropoulos, Georgios and Saponati, Matteo and Dowdall, Jarrod Robert and Sch{\"o}lvinck, Marieke Louise and Bosman, Conrado Arturo and Lima, Bruss and Peter, Alina and Onorato, Irene and Klon-Lipok, Johanna and Roese, Rasmus and others},
+  journal={Nature communications},
+  volume={13},
+  number={1},
+  pages={1--18},
+  year={2022},
+  publisher={Nature Publishing Group}
 }
 ```
 
