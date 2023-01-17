@@ -9,6 +9,9 @@ PARAMETERS
 
 beta1, beta2, time, A
 """
+
+A = np.zeros((2,2))
+
 beta1 = float(sys.argv[1]) if len(sys.argv) > 1 else 1.9449
 beta2 = float(sys.argv[2]) if len(sys.argv) > 2 else -.9801
 time = int(sys.argv[3]) if len(sys.argv) > 3 else 400
@@ -23,7 +26,7 @@ NUMERICAL SOLUTIONS
 find the solution numerically for the AR(2) model
 compute affine transformation in the (E,I) space
 """
-ar,E,I = funs.num_solution(beta1,beta2,A,time)
+ar,E,I = num_solution(A,beta1,beta2,time)
 
 'save'
 np.save('results/num_solution_ei',[E,I])
