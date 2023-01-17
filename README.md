@@ -26,7 +26,7 @@ outputs: <br/>
 `results/num_solution_ar.npy`: numerical solution of AR(2) model <br/>
 `results/num_solution_ei.npy`: numerical solution of (E,I) system obtained with the affine transformation
 
-* scripts to replicate the results shown in the related figure<br/>
+* scripts to replicate the results shown in the related figure:<br/>
 `python suppfig_1` (optional arg: affine matrix `A`) <br/>
 `python suppfig_2` (optional args: `beta1`, `beta2`, number of timesteps `time`, affine matrix `A`) <br/>
 `python suppfig_3` (optional args: (optional args: `beta1`, `beta2`, number of timesteps `time`, affine matrix `A`) <br/><br/>
